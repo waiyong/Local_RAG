@@ -5,7 +5,8 @@ def load_llm():
     """Loads the Llama 3.2 model with Metal backend."""
     return LlamaCPP(
         model_path=MODEL_PATH,
-        temperature=0.3,
-        max_new_tokens=1024,
-        model_kwargs={"n_gpu_layers": -1}  # Full Metal acceleration
+        temperature=0.1,
+        max_new_tokens=256,
+        generate_kwargs={},
+        model_kwargs={"n_gpu_layers": -1, "verbose":False}  # Full Metal acceleration
     )

@@ -1,27 +1,23 @@
-# app.py
-
 import chainlit as cl
 import chromadb
-
-from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
+from llama_index.core import (
+    VectorStoreIndex,
+    Settings,
+    StorageContext,
+    PromptTemplate
+)
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-from llama_index.core.node_parser import TokenTextSplitter
-from config import EMBEDDING_MODEL_NAME, EMBEDDING_MODEL_PATH, TOP_K
-from llm_loader import load_llm
-from llama_index.core.node_parser import SentenceSplitter
-from llama_index.core.memory import ChatMemoryBuffer
-from llama_index.core import PromptTemplate
-from llama_index.core.chat_engine import CondenseQuestionChatEngine
-from llama_index.core.llms import ChatMessage, MessageRole
-from llama_index.core import StorageContext, VectorStoreIndex
 from llama_index.vector_stores.chroma import ChromaVectorStore
-
 from llama_index.core.callbacks import CallbackManager
+from llama_index.core.memory import ChatMemoryBuffer
+from llama_index.core.chat_engine import CondenseQuestionChatEngine
+from config import EMBEDDING_MODEL_NAME, EMBEDDING_MODEL_PATH, TOP_K,MAX_TOKENS_GENERATE,MEMORY_LENGTH
+from llm_loader import load_llm
 
 
 # Initialize ChromaDB Storage
 chroma_client = chromadb.PersistentClient(path="./chroma_db")
-chroma_collection = chroma_client.get_or_create_collection("financial_reports")
+chroma_collection = chroma_client.get_or_create_collection("financial_reports_2")
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
@@ -61,6 +57,7 @@ You are an AI assistant providing structured responses.
 ### **Instructions:**
 - Answer clearly and concisely.
 - Summarize retrieved context to avoid duplication.
+- Summarize the key facts efficiently.
 - If the context lacks enough details, say: "I don’t have enough information."
 - Format responses in natural sentences.
 
@@ -70,7 +67,7 @@ You are an AI assistant providing structured responses.
 <User's Query>
 {question}
 
-<AI Response>
+### **AI Response:**
 """
 )
 
@@ -81,7 +78,7 @@ async def start():
     # Load LLM
     llm = load_llm()
     Settings.llm = llm
-    Settings.context_window = 4096
+
     # Initialize the CallbackManager with Chainlit's callback handler
     callback_manager = CallbackManager([cl.LlamaIndexCallbackHandler()])
 
@@ -90,11 +87,12 @@ async def start():
         response_mode="compact",
         response_prompt=response_prompt,
         similarity_top_k=TOP_K,
+        max_tokens = MAX_TOKENS_GENERATE,
         service_context=callback_manager,
         streaming=True
     )
 
-    memory = ChatMemoryBuffer.from_defaults(token_limit=2048)
+    memory = ChatMemoryBuffer.from_defaults(token_limit=MEMORY_LENGTH)
 
     chat_engine = CondenseQuestionChatEngine.from_defaults(
         query_engine=query_engine,

@@ -17,7 +17,8 @@ from llm_loader import load_llm
 
 # Initialize ChromaDB Storage
 chroma_client = chromadb.PersistentClient(path="./chroma_db")
-chroma_collection = chroma_client.get_or_create_collection("financial_reports_2")
+#chroma_collection = chroma_client.get_or_create_collection("financial_reports_2")
+chroma_collection = chroma_client.get_or_create_collection("datalab_demo")
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 

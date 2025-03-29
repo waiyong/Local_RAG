@@ -1,0 +1,64 @@
+﻿Category,Question,Answer,Response,Context Relevancy,Faithfulness,Answer Relevancy,Answer Correctness
+Data Dictionaries,What do the data fields and values mean?,Please refer to the code table.,"The data fields and values in the MOM Data Lab are defined in the Data Lab Data Dictionary. Here are some examples of data fields and their descriptions:
+
+1. **Age**: Age of the worker as of the year and month of employment.
+2. **Appln Dt**: Work pass application date.
+3. **Company Name (Fixed)**: Name of the company.
+4. **CTZ_TAG**: SC/PR indicator, which denotes the citizenship status.
+5. **Ecpf**: Employer CPF contribution.
+6. **SSIC_MRSD/SSIC_WPD_EP/SSIC_WPD_WP**: SSIC2015 for locals and SSIC2010 for foreign workers. Contact the Data Unit to understand more about which to use for your workstream.
+
+For a comprehensive list of data fields and their descriptions, please refer to the Data Lab Data Dictionary. If you need further assistance, you may contact MOM-MPPD-Data@mom.gov.sg.
+
+Reference: Data Lab Data Dictionary.xlsx
+
+If you have specific data fields in mind, please let me know, and I can provide more detailed information.",0,0.917,0.833,0
+Lab Availability,When does the data lab have available terminals within the next month?,Please check the resource calendar at the MOM Data Lab website (https://sgdcs.sgnet.gov.sg/sites/MOM-mppd/data-lab/_layouts/15/WopiFrame.aspx?sourcedoc=%7Bf51e0dbb-f97a-4106-9beb-1207be6a59f9%7D&action=default&slrid=261c7ea1-4e58-500d-6be1-9e306eff7ea5),"To view the availability of lab terminals, please visit the following link: [Terminals Availability](https://sgdcs.sgnet.gov.sg/sites/MOM-mppd/data-lab/_layouts/15/WopiFrame.aspx?sourcedoc=%7Bf51e0dbb-f97a-4106-9beb-1207be6a59f9%7D&action=default&slrid=1f8b4aa1-3ebd-500d-b5c1-048e7d5d595a). Please ensure to check the availability before submitting a booking request. If you have any further questions, feel free to contact MOM-MPPD-Data@mom.gov.sg.",0,1,0.667,0.667
+Software Availability,What software is available on the Data Lab terminals?,"Tableau, Microsoft Office, Python, R, Stata","The MOM Data Lab terminals are equipped with software for data analysis, including Tableau, Stata, Python, and R. Officers using the Data Lab are expected to have a minimal level of technical expertise in these software tools for data analysis. 
+
+For further details, please refer to the SOP for Data Lab (Version 9.0, Edited). If you have additional questions or require specific software, please contact MOM-MPPD-Data@mom.gov.sg.",0,0.75,0.75,0.615
+Data Availability,What is the latest year and month of data available for all the datasets in Datalab?,Please refer to the Software and Data Products page on the MOM Data Lab website for the latest available Yearmonth (https://gccprod.sharepoint.com/sites/MOM-DataLab/SitePages/Data-Products.aspx).,Please refer to the Data Products page on the MOM Data Lab website for the latest data available.,0,1,1,0.667
+Tableau/Code Generation,How do I create my own groups in Tableau?,"Select the Dimension to Group:
+
+In the Data pane, right-click on the dimension you want to group (e.g., Category, Region).
+Create Group:
+
+Select ""Create"" and then ""Group"" from the context menu.
+Group Members:
+
+In the ""Create Group"" dialog box, select the members you want to group together.
+Click the ""Group"" button to group the selected members.
+You can rename the group by double-clicking on the default group name.
+Add More Members to the Group (Optional):
+
+If you need to add more members to the group, simply select them and click ""Group"" again.
+Finalize and Apply:
+
+Once you have grouped all the necessary members, click ""OK"" to create the group.","To create your own groups in Tableau, follow these steps: 1. **Open Tableau and Load Data**: Start by opening Tableau and loading the dataset you wish to work with. 2. **Select the Dimension**: In the Data pane, right-click on the dimension you want to group. 3. **Create Group**: Choose ""Create"" and then ""Group"" from the context menu. 4. **Group Members**: In the ""Create Group"" dialog box, select the members you want to group together. You can do this by holding down the Ctrl key (Cmd key on Mac) and clicking on the items you want to group. 5. **Name the Group**: After selecting the members, click ""Group"" to create the group. You can rename the group by double-clicking on the default name. 6. **Add More Members**: If you need to add more members to the group, you can do so by selecting them and clicking ""Group"" again. 7. **Finish and Apply**: Once you have created all the necessary groups, click ""OK"" to apply the changes. 8. **Use the Group**: The new group will appear as a new field in the Data pane, which you can use in your visualizations. For further details, you may refer to Tableau's official documentation or the help section within the Tableau software. If you require additional assistance or have specific questions related to Tableau usage within the MOM Data Lab, please contact MOM-MPPD-Data@mom.gov.sg.",0,0,0.9,0.556
+Password Reset,How do I change or reset my Data Lab account password?,"To change or reset your Data Lab password, you first need to be connected to a MOM Network. Open Google Chrome and go to account.intranet.mom.gov.sg. Key in your MOM LAN ID (e.g. DLGST1234 or DLM1234) and click on 1) Reset Forgotten Password or 2) Change Password Upon/Prior Expiry. Please note that you will need to answer your two security questions, and an OTP that will be sent to your GSIB.
+
+If this is your first time setting up your account, please approach a Data Lab admin for assistance.","To change or reset your Data Lab account password, please follow the instructions based on your user category: **For External Users:** 1. Ensure you are connected to a MOM Network. 2. Open Google Chrome and navigate to account.intranet.mom.gov.sg. 3. Enter your MOM LAN ID (e.g., DLGST1234) and select either ""Reset Forgotten Password"" or ""Change Password Upon/Prior Expiry."" 4. Answer your two security questions, and an OTP will be sent to your GSIB. 5. Input the OTP and proceed to change/reset your password. If this is your first time setting up your account, please approach a Data Lab admin for assistance. **For MOM Users:** Please approach a Data Lab admin for assistance. Reference: AIBots - FAQs.docx If you require further assistance, please contact MOM-MPPD-Data@mom.gov.sg.",0,0.8,0.7,0.667
+SSOC/SSC,How do I map the SSOC/SSIC codes?,"To map your SSIC/SSOC codes, please use the respective correspondence tables found in MRSD_External > WIP > Appended > MISC. You can use a lookup function in Excel to map the ","I do not have specific information on mapping SSOC 2000 with the latest SSOC, such as SSOC 2020, in my current knowledge base. For detailed guidance on mapping these classifications, I recommend contacting the Data Unit at MOM-MPPD-Data@mom.gov.sg. They should be able to provide the necessary resources or direct you to the appropriate documentation for your needs.",0,0,1,0
+SSOC/SSC,What version of SSOC and SSIC do the dashboards use?,SSIC is at version 2015 for locals and 2010 for foreigners. SSOC is not available for locals and is at version 2000 for foreigners.,"The dashboards in the MOM Data Lab use SSIC2015 for locals and SSIC2010 for foreign workers. For SSOC, SSOC2000 is used for foreign workers only. If you need further clarification on which to use for your specific workstream, please contact the Data Unit. Reference: Data Lab Data Dictionary.xlsx If you have any additional questions or require further assistance, please feel free to reach out.",0,0.6,0.8,0.5
+Troubleshooting,What do I do when I cannot access the MRSD_External folder?,"FOR EXTERNAL USERS:
+1. Ensure that Symantec Endpoint Protection is on by right clicking on the small arrow on the bottom right corner of the Windows task bar. There should be a small green circle is Symantec Endpoint Protection is working correctly.
+
+2. Ensure that you have entered the credentials correctly in Credential Manager (Internet or network address: hqmsdb138, User Name: MOM\DLGSTXXX and your password). If you are still unable to access MRSD_External, refrain from clicking on the MRSD_External folder again as repeated tries with the wrong password will lock your account.
+
+3. If you have entered your credentials correctly, but are still unable to access MRSD_External, your account may have already been locked or disabled. Accounts that have not been signed in for 3 months will be automatically disabled. If your account has been locked, please use the MOM Service Portal to unlock your account. If it has been disabled, please approach a Data Lab admin for assistance. 
+
+FOR MOM and MPPD USERS
+Please approach a Data Lab admin for assistance.","For external users, please follow these steps: 1. Ensure that Symantec Endpoint Protection is active by right-clicking on the small arrow on the bottom right corner of the Windows taskbar. A small green circle indicates that Symantec Endpoint Protection is functioning correctly. 2. Verify that you have entered the credentials correctly in Credential Manager (Internet or network address: hqmsdb138, User Name: MOMDLGSTXXX, and your password). Avoid repeated attempts with the wrong password as it may lock your account. 3. If you have entered your credentials correctly but still cannot access MRSD_External, your account may be locked or disabled. Accounts not signed in for 3 months are automatically disabled. Use the MOM Service Portal to unlock your account or approach a Data Lab admin for assistance if it has been disabled. For MOM and MPPD users, please approach a Data Lab admin for assistance. Reference: AIBots - FAQs.docx If further assistance is required, please contact MOM-MPPD-Data@mom.gov.sg.",0,0.909,0.636,0.889
+Troubleshooting,What do I do if the Data Extraction E-log is not working?,"1. Ensure that you are connected to MRSD_External.
+2. Close all excel files.
+3. Make sure to use the Data Extraction E-log shortcut on Desktop.
+4. If the E-log is still not working, try restarting the computer.
+5. Approach a Data Lab admin for assistance if the above steps fail.","If the Data Extraction E-log is not functioning as expected, please follow these steps: 1. Verify that you have the correct access permissions to the MRSD server where the E-log is located. 2. Ensure that your network connection is stable and that you are connected to the MOM network. 3. If the issue persists, please contact a Data Lab administrator for assistance. They can provide guidance or escalate the issue to the appropriate technical support team. For further assistance, you may also reach out to MOM-MPPD-Data@mom.gov.sg. Reference: SOP for Data Lab_v9.0_Edited, Section 42.",0,0.429,1,0.182
+SOP,How do I extract data from the lab?,"FOR EXTERNAL USERS:
+Please submit a Data Extraction Request via FormSG on the MOM Data Lab wesbite: https://form.gov.sg/63ef97420e7bce0013e702c2.
+
+FOR MOM (NON-MPPD USERS:
+1. Use the Data Extraction E-log to password protect and log your file.
+2. Send us an email at MOM-MPPD-Data@mom.gov.sg with the file path/name.
+3. A Data Lab admin will send you your file ","To extract data from the MOM Data Lab, please follow these steps: 1. **Submit a Data Extraction Request**: You need to submit a request for data extraction. Ensure that your justifications are duly completed, as incomplete or vague submissions may be rejected. You can submit your request through the following link: [Data Extraction Request Form](https://form.gov.sg/63ef97420e7bce0013e702c2). 2. **Approval Process**: Your request will be evaluated according to the ""SOP for Evaluating Data Requests."" Once approved, you will receive an approval email from the relevant authority. 3. **Use of Portable Storage Media (PSM)**: For approved data extraction requests, you can use the Data Unit's authorized Portable Storage Media (PSM) to transfer the data from the terminals. You will need to record the usage of PSM in the electronic log file located at the MRSD server: ""MRSD_ExternalOfficers_WIPData_Extraction E-Log."" 4. **Data Security Measures**: Ensure that all extracted files are of Office (.xlsx, .docx, .pptx) types and consolidated in one file to facilitate data security measures. The data files need to be individually password-protected in accordance with IM8 requirements using Microsoft's in-built Digital Right Management (DRM) solution before sending the data to external officers. 5. **Data Archiving**: Log all data extractions with the Data Extraction Log program in the MRSD server. The file(s) will be archived into the server for audit/verification purposes. For further details, please refer to the ""SOP for Data Lab"" (Version 9.0, Edited). If you have any questions or need assistance, please contact MOM-MPPD-Data@mom.gov.sg.",0,1,0.385,0.4
+,,,,0,0.8,0.8,0.556

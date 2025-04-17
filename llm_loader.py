@@ -6,7 +6,8 @@ def load_llm():
     return LlamaCPP(
         model_path=MODEL_PATH,
         temperature=0.1,
-        max_new_tokens=256,
+        max_new_tokens=512,
+        context_window=8192,
         generate_kwargs={},
         model_kwargs={"n_gpu_layers": -1, "verbose":False}  # Full Metal acceleration
     )
